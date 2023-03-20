@@ -12,7 +12,7 @@ public class Receive {
 class ReceiveTask implements Runnable {
     @Override
     public void run() {
-        String sqsUrl = "https://sqs.ap-southeast-1.amazonaws.com/975230531453/scq-queue.fifo";
+        String sqsUrl = "https://sqs.ap-southeast-1.amazonaws.com/12345678901/scq-queue.fifo";
         Handler h = new Handler(sqsUrl);
         h.recvMsgRequest(Thread.currentThread().getName());
         System.out.print(Thread.currentThread().getName() + " stop!!");

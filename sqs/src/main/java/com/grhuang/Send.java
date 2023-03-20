@@ -12,7 +12,7 @@ public class Send {
 class SendTask implements Runnable {
     @Override
     public void run() {
-        String sqsUrl = "https://sqs.ap-southeast-1.amazonaws.com/975230531453/scq-queue.fifo";
+        String sqsUrl = "https://sqs.ap-southeast-1.amazonaws.com/12345678901/scq-queue.fifo";
         Handler h = new Handler(sqsUrl);
         for (int i = 0; i < 100; i++) {
             h.sendMsgRequest("Body " + i + " Thread " + Thread.currentThread().getId());
